@@ -1,0 +1,46 @@
+<section id="creacion" (keyup.enter)="guardarUsuario()">
+  <div class="row m-0">
+      <div class="wrapper wrapper--w680 py-lg-5">
+        <div class="card card-1">
+          <div class="card-body">
+            <h2 class="title">Registro de usuario</h2>
+            <form [formGroup]="creaForm">
+              <div class="input-group div-padre">
+                <input class="input--style-1" type="text" placeholder="Rut sin puntos ni guión" formControlName="rut" formatRut>
+              </div>
+              <div class="input-group div-padre">
+                <input class="input--style-1" type="text" placeholder="Nombres" formControlName="nombreUsuario">
+              </div>
+              <div class="input-group div-padre">
+                <input class="input--style-1" type="text" placeholder="Apellido paterno" formControlName="appPaterno">
+              </div>
+              <div class="input-group div-padre">
+                <input class="input--style-1" type="text" placeholder="Apellido materno" formControlName="appMaterno">
+              </div>
+              <div class="input-group-correo div-padre">
+                <input class="input--style-1" type="email" placeholder="Ingrese su correo" formControlName="correo">
+              </div>
+              <div>
+                <span class="texto-correo" *ngIf="creaForm.get('correo').hasError('email')">Formato de correo inválido</span>
+              </div>
+              <div class="input-group div-padre">
+                <label><b>Contraseña: </b></label>
+                <input class="input--style-1" type="password" formControlName="password">
+              </div>
+            </form>
+            <div class="div-padre">
+              <div class="div-hijo">
+                <button class="btn btn--radius btn--green" (click)="guardarUsuario()">Guardar</button>
+              </div>
+              <div class="div-hijo">
+                <button routerLink="/login-usuario" class="btn btn--radius btn--red">Volver</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+

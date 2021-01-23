@@ -1,0 +1,61 @@
+<div class="d-flex" id="menu">
+
+  <div id="sidebar-wrapper" class="fondo-menu">
+    <div class="list-group list-group-flush">
+      <br><br><br><br><br>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a>Bienvenido</a>
+          </li>
+          <li>
+            <a (click)="cambio(1)" style="cursor: pointer">Inicio</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div id="page-content-wrapper">
+
+    <nav class="navbar navbar-expand-lg fondo-nav">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn--radius btn--red dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>
+                {{nombreUsuario}}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" routerLink="/login-usuario">Cerrar sesión</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <br><br>
+      <div class="card" *ngIf="ventana == 1">
+        <div class="card-bar">
+          <div class="card-title">
+            <b>Inicio de acciones</b>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="col-md-12">
+           <app-funcionalidad></app-funcionalidad>
+          </div>
+        </div>
+        <br><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

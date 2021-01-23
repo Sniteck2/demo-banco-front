@@ -1,0 +1,84 @@
+<div class="col-md-12">
+  <div class="row">
+    <label class="texto-titulo"><strong>Saldo disponible en cuenta: {{montoDisponible}}</strong></label>
+  </div>
+  <div class="row justify-content-center">
+    <label class="texto-titulo"><strong>Acciones disponibles</strong></label>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-auto">
+      <div class="row">
+        <div class="col-md-auto">
+          <label class="texto">Agregar fondos</label>
+        </div>
+        <div class="col-md-auto">
+          <input type="number" [(ngModel)]="montoIngreso" placeholder="Ingrese monto">
+        </div>
+        <div class="col-md-auto">
+          <button class="button btn-info" (click)="agregarFondos(1)">Aceptar</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-auto">
+      <div class="row">
+        <div class="col-md-auto">
+          <label class="texto">Retirar fondos</label>
+        </div>
+        <div class="col-md-auto">
+          <input type="number" [(ngModel)]="montoRetiro" placeholder="Ingrese monto">
+        </div>
+        <div class="col-md-auto">
+          <button class="button btn-info" (click)="agregarFondos(2)">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-md-auto">
+      <label class="texto">Transferir: </label>
+    </div>
+    <div class="col-md-auto">
+      <input type="number" [(ngModel)]="montoTransferir" placeholder="Ingrese monto">
+    </div>
+    <div class="col-md-auto">
+      <label class="texto">Hacia: </label>
+    </div>
+    <div class="col-md-auto">
+      <input type="text" [(ngModel)]="rut" placeholder="Rut sin puntos ni guión" formatRut>
+    </div>
+    <div class="col-md-auto">
+      <button class="button btn-info" (click)="transferencia(4)">Aceptar</button>
+    </div>
+  </div>
+  <br><br>
+  <div class="row justify-content-center">
+    <label class="texto-titulo"><strong>Historial</strong></label>
+  </div>
+  <div class="row justify-content-center">
+    <table class="table table-bordered table-hover table-sm" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+      <thead class="fondo-grilla">
+      <tr>
+        <th>Fecha movimiento</th>
+        <th>Tipo de movimiento</th>
+        <th>Desde</th>
+        <th>Hacia</th>
+        <th>Monto del movimiento</th>
+        <th>Saldo disponible</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container>
+        <tr *ngFor="let item of transacciones">
+          <td>{{item.fechaMovimiento | date: 'dd/MM/yyyy'}}</td>
+          <td>{{item.nombreMovimiento}}</td>
+          <td>{{item.desde}}</td>
+          <td>{{item.hasta}}</td>
+          <td>{{item.montoMovimiento}}</td>
+          <td>{{item.montoRestante}}</td>
+        </tr>
+      </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

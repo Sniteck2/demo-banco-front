@@ -1,0 +1,131 @@
+// Login Page
+
+#login {
+  background-image: url('../../../assets/img/gallery/fondo7.jpg');
+  //background-attachment: fixed;
+  //background-position: center;
+  //background-size: cover;
+
+  .border-container {
+    height: 500px;
+  }
+
+  .login-container {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+
+    .input-group-prepend {
+      border: 0;
+    }
+
+    .input-group-text {
+      background-color: white;
+    }
+  }
+
+  .login-img {
+    padding: 0;
+    background: #f0f0f0;
+  }
+
+  .login-btn {
+    .btn.btn-outline-primary {
+      &:hover {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .recover-pass {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .forgot-password-option, .remember-me {
+    a.text-decoration-none,
+    .custom-control-label {
+      font-size: 14px;
+    }
+  }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.error {
+  background: rgba(255,255,255, .9);
+  color: #B05150;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.advertencia  {
+  background: rgba(255,255,255, .9);
+  color: #EF974B;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.exito {
+  background: rgba(255,255,255, .9);
+  color: #47AE74;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.info {
+  background: rgba(255,255,255, .9);
+  color: #455870;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.centrado-vertical {
+  vertical-align: middle;
+}
+
+.super-border-right {
+  border-right: 2px solid white;
+  opacity: 0.5;
+}
+
+.btn-purpura{
+  background-color: #5360a9;
+}
+
+.forgot-password-option,
+.remember-me {
+  a.text-decoration-none,
+  .custom-control-label {
+    font-size: 14px;
+  }
+}
+
+.padre {
+  margin: 1rem;
+  padding: 1rem;
+  /* IMPORTANTE */
+  text-align: center;
+}
+
+.full-height-vh{
+  height: 100vh !important;
+}
+
+.login-tittle{
+  font-size: 18px;
+}
